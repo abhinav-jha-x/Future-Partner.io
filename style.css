@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #4115d35c;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.subtitle {
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+}
+
+button, .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #e91e63;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff2f7d;
+}
+
+.result-box {
+    animation: fade 0.6s ease-out;
+}
+
+/* Girl Image */
+.girl-img {
+    width: 100%;
+    height: 450px;
+    object-fit: 100%;
+    border-radius: 12px;
+    filter: blur(10px);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.girl-img.loaded {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.gift-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* 📱 Mobile (Default) is already optimized */
+
+/* 📱 Small Phones (Galaxy Fold, iPhone SE) */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 22px;
+    }
+    .container {
+        padding: 18px;
+    }
+    button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+/* 📱 Regular Phones (iPhone, Samsung) */
+@media (min-width: 361px) and (max-width: 500px) {
+    h1 {
+        font-size: 26px;
+    }
+}
+
+/* 📱📱 Larger phones / Small tablets */
+@media (min-width: 501px) and (max-width: 768px) {
+    .container {
+        max-width: 600px;
+        padding: 35px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    button {
+        font-size: 18px;
+    }
+}
+
+/* 📲 Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 700px;
+        padding: 40px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    select {
+        font-size: 17px;
+    }
+}
+
+/* 🖥 Desktop / Laptop */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 500px;
+    }
+}
